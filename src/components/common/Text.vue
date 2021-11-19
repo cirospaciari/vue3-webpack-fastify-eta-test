@@ -1,16 +1,14 @@
 
-<style lang="scss">
-#app {
-  .greeting {
+<style lang="scss" scoped>
+  p {
     color: red;
     font-weight: bold;
   }
-}
 </style>
 
 <template>
   <h2 v-if="this.title">{{ this.title }}</h2>
-  <p class="greeting"><slot></slot></p>
+  <p><slot></slot></p>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <% layout('layout.eta') %>
 
 <div id="content">
-  <vue:common:text xablau="Test Title Props"><%= it.message %></vue:common:text>
+  <vue:common:text xablau="Test Title Props"><%= it.message %>  </vue:common:text>
 </div> 
