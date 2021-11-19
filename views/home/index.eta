@@ -4,6 +4,10 @@
   <vue:common:text xablau="Test Title Props"><%= it.message %>  </vue:common:text>
 
   <vue:list>
+      <template v-slot:title>
+        <h3>Named Slots Test</h3>
+      </template>
+
       <vue:item>Ciro</vue:item>
       <vue:item>Geizi</vue:item>
   </vue:list>

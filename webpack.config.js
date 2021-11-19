@@ -49,7 +49,7 @@ module.exports = {
           const Component = (await import(${JSON.stringify(component.file)})).default;
           return {
                   components: {'dynamic': Component},
-                  template: '<dynamic v-bind="$attrs"><slot></slot></dynamic>'              
+                  template: '<dynamic v-bind="$attrs"><template v-for="(_, name) in $slots" v-slot:[name]="slotData"><slot :name="name" v-bind="slotData" /></template></dynamic>'              
           };
         });`
       }).join('')}
