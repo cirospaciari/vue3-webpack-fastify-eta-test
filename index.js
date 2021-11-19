@@ -1,7 +1,18 @@
 const path = require('path');
 const fastify = require('fastify')();
 
-global.SCRIPT_ENTRY_POINT = require('./static/asset-manifest.json').entrypoints[0];
+
+global.SCRIPT_ENTRIES = [];
+global.CSS_ENTRIES = [];
+
+require('./static/asset-manifest.json').entrypoints.forEach((entrypoint)=> {
+
+    if(entrypoint.endsWith('.js')){
+        SCRIPT_ENTRIES.push(entrypoint);
+    }else if(entrypoint.endsWith('.css')){
+        CSS_ENTRIES.push(entrypoint);
+    }
+})
 
 fastify.register(require('fastify-static'), {
     root: path.join(__dirname, 'static')

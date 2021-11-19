@@ -2,13 +2,18 @@
 <html lang="en">
   <head>
     <title><%= it.title %></title>
+
+    <% CSS_ENTRIES.forEach(function(css_name){ %>
+      <link rel="stylesheet" type="text/css" href="/<%=css_name%>">
+    <% })%>
   </head>
   <body>
     <main id="app">
         <%~ it.body %>
         <footer>Xablau, Inc.</footer>
     </main>
-    
-    <script src="<%=SCRIPT_ENTRY_POINT%>"></script>
+    <% SCRIPT_ENTRIES.forEach(function(script_name){ %>
+      <script src="/<%=script_name%>"></script>
+    <% }) %>
   </body>
 </html>

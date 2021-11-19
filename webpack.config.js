@@ -169,7 +169,8 @@ module.exports = {
             options: {
               sourceMap: mode === 'development'
             }
-          }
+          },
+          
         ]
       }
     ]
