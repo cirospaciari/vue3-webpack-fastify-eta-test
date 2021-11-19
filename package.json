@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
-    "dev": "concurrently \"WEBPACK_WATCH=true npm run build:dev\" \"sleep 3 && nodemon -e js,css,scss,json,html,png,svg,jpg,jpeg,webp,bmp,ico,txt,eta index.js --delay 1\"",
+    "dev": "concurrently \"WEBPACK_WATCH=true npm run build:dev\" \"sleep 3 && nodemon -e js,css,scss,json,html,xml,png,svg,jpg,jpeg,webp,apng,avif,jfif,pjpeg,pjp,ico,cur,tif,tiff,txt,eta index.js --delay 1\"",
     "build:stg": "WEBPACK_MODE=production NODE_ENV=development webpack --config ./webpack.config.js",
     "build:dev": "WEBPACK_MODE=development NODE_ENV=development webpack --config ./webpack.config.js",
     "build": "WEBPACK_MODE=production NODE_ENV=production webpack --config ./webpack.config.js"

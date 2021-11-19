@@ -130,10 +130,10 @@ module.exports = {
         use: ['@svgr/webpack', 'url-loader']
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.(png|jpe?g|gif|svg|webp|apng|avif|jfif|pjpeg|pjp|ico|cur|tif|tiff)$/i,
         loader: 'file-loader',
         options: {
-          publicPath: '/media/',
+          publicPath: '/img/',
           name(resourcePath, resourceQuery) {
             // `resourcePath` - `/absolute/path/to/file.js`
             // `resourceQuery` - `?foo=bar`
@@ -145,7 +145,7 @@ module.exports = {
             return '[contenthash].[ext]';
           },
           outputPath: (url, resourcePath, context) => {
-            return `media/${url}`;
+            return `img/${url}`;
           }
         }
       },
